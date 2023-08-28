@@ -1,0 +1,27 @@
+<div class="registration-form">
+     <form (ngSubmit)="submitForm()">
+      <label>
+        Fullname:
+        <input type="text" name="fullName" [(ngModel)]="customer.fullName" required>
+      </label>
+      <label>
+        Preferred language :
+        <select name="preferredLanguage" [(ngModel)]="customer.preferredLanguage" required>
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="he">Hebrew</option>
+
+        </select>
+      </label>
+      <label>
+        Phone number :
+        <input type="number" name="phoneNumber" [(ngModel)]="customer.phoneNumber" required>
+      </label>
+      <label>
+        CustomerFace:
+        <input type="file" name="customerFace" accept="image/*" (change)="handleFileInput($event)">
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
