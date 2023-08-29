@@ -26,20 +26,22 @@ export class RegisterComponent {
   }
 
   submitForm() {
-    // Simulate a successful submission for demonstration purposes
-    const isSuccessful = true; // Change this according to your actual submission logic
+    if (this.customer.fullName && this.customer.preferredLanguage && this.customer.phoneNumber && this.customer.customerFace) {
+      // Simulate a successful submission for demonstration purposes
+      const isSuccessful = true; // Change this according to your actual submission logic
 
-    if (isSuccessful) {
-      this.successMessage = 'Le formulaire a été soumis avec succès !';
-      this.isFormSubmitted = true;
-      console.log('Formulaire soumis :', this.customer);
+      if (isSuccessful) {
+        this.successMessage = 'Le formulaire a été soumis avec succès !';
+        this.isFormSubmitted = true;
+        console.log('Formulaire soumis :', this.customer); // Afficher les données du formulaire dans la console
+      } else {
+        this.errorMessage = 'Une erreur s\'est produite lors de la soumission du formulaire.';
+      }
     } else {
-      this.errorMessage = 'Une erreur s\'est produite lors de la soumission du formulaire.';
+      this.errorMessage = 'Veuillez remplir tous les champs du formulaire.';
     }
   }
 }
-
-  
 
 
    
