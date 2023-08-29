@@ -21,7 +21,19 @@
         CustomerFace:
         <input type="file" name="customerFace" accept="image/*" (change)="handleFileInput($event)">
       </label>
-      <button type="submit">Submit</button>
+      <div class="registration-form">
+        <h2>Enregistrement du client</h2>
+        <form (ngSubmit)="submitForm()">
+          <!-- ... autres champs de formulaire ... -->
+      
+          <button type="button" (click)="onClickSubmit()">Enregistrer</button>
+        </form>
+      
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+      </div>
+      
+
     </form>
   </div>
   
