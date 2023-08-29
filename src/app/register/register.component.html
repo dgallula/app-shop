@@ -21,9 +21,8 @@
         CustomerFace:
         <input type="file" name="customerFace" accept="image/*" (change)="handleFileInput($event)">
       </label>
-      <div class="registration-form">
-        <h2>Enregistrement du client</h2>
-        <form (ngSubmit)="submitForm()">
+      <div class="submit">
+         <form (ngSubmit)="submitForm()">
           <!-- ... autres champs de formulaire ... -->
       
           <button type="button" (click)="onClickSubmit()">Enregistrer</button>
