@@ -27,6 +27,7 @@ export class RegisterComponent {
 
   submitForm() {
     if (this.customer.fullName && this.customer.preferredLanguage && this.customer.phoneNumber && this.customer.customerFace) {
+      this.errorMessage = ''; // Supprimer le message d'erreur
       // Simulate a successful submission for demonstration purposes
       const isSuccessful = true; // Change this according to your actual submission logic
 
